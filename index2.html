@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <title>Slime Datta Ken — Onde Assistir</title>
+
+  <style>
+    :root {
+      --bg: #080b16;
+      --panel: #11182a;
+      --blue: #00baff;
+      --cyan: #66e4ff;
+      --text: #fff;
+      --muted: #a9b7cc;
+      --border: #263750;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 0%, #123b66 0%, transparent 48%),
+        var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      padding: 22px 15px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: #080b16cc;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: 1000;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    .brand span { color: var(--blue); }
+
+    main {
+      width: min(100% - 28px, 900px);
+      margin: auto;
+      padding: 26px 0 45px;
+    }
+
+    .hero {
+      padding: 28px 16px;
+      border: 1px solid #28547d;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #122b49, #101426 75%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(29px, 7vw, 48px);
+      font-weight: 1000;
+      font-style: italic;
+      letter-spacing: -1px;
+    }
+
+    h1 span { color: var(--blue); }
+
+    .hero p {
+      max-width: 600px;
+      margin: 15px auto 0;
+      color: #d2deee;
+      line-height: 1.7;
+    }
+
+    .anime-banner {
+      margin-top: 20px;
+      padding: 20px 16px;
+      border: 1px solid #28547d;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #172e43, #101321);
+      text-align: center;
+    }
+
+    .anime-banner h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+    }
+
+    .anime-banner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .ad-section {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 25px auto;
+    }
+
+    .ad-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 728px;
+      overflow: visible;
+    }
+
+    .continue-area {
+      padding: 22px 0;
+      text-align: center;
+    }
+
+    .continue-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 420px;
+      min-height: 55px;
+      padding: 15px 20px;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(100deg, #00baff, #1769ff);
+      color: #04101e;
+      font-size: 14px;
+      font-weight: 1000;
+      letter-spacing: .5px;
+      cursor: pointer;
+      box-shadow: 0 0 28px #00baff25;
+    }
+
+    .continue-button:hover { filter: brightness(1.13); }
+
+    #status-message {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    #platforms {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .section-title {
+      margin: 10px 0;
+      font-size: clamp(24px, 5vw, 34px);
+      text-align: center;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .platform-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 19px 12px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #151f33, #0e1322);
+      text-align: center;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--blue);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 66px;
+      height: 66px;
+      border-radius: 17px;
+      background: #202c41;
+      font-size: 24px;
+      font-weight: 1000;
+    }
+
+    .logo-crunchyroll {
+      background: #111;
+      color: #ff7900;
+      font-size: 39px;
+    }
+
+    .logo-netflix {
+      background: #080808;
+      color: #e50914;
+      font-family: Arial Black, Arial, sans-serif;
+      font-size: 43px;
+    }
+
+    .logo-prime { color: #42c8ff; }
+
+    .platform-name {
+      font-size: 15px;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .platform-description {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .platform-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 43px;
+      padding: 11px 7px;
+      border-radius: 8px;
+      background: #233550;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .platform-link:hover { filter: brightness(1.2); }
+
+    .platform-link.crunchyroll {
+      background: #ff7900;
+      color: #111;
+    }
+
+    .platform-link.netflix { background: #e50914; }
+    .platform-link.prime { background: #146b98; }
+
+    .notice {
+      margin-top: 24px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 22px 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (min-width: 650px) {
+      .platform-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 360px) {
+      .platform-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">SLIME <span>DATTA KEN</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">GUIA DE ANIME</div>
+      <h1>THAT TIME I GOT REINCARNATED AS A <span>SLIME</span></h1>
+
+      <p>
+        Depois de renascer em outro mundo como um slime,
+        Rimuru Tempest começa uma jornada extraordinária,
+        fazendo aliados e construindo uma nova nação.
+      </p>
+    </section>
+
+    <section class="anime-banner">
+      <h2>That Time I Got Reincarnated as a Slime</h2>
+      <p>
+        Também conhecido como Tensei Shitara Slime Datta Ken.
+        Escolha uma plataforma abaixo para pesquisar o anime
+        e consultar a disponibilidade das temporadas.
+      </p>
+    </section>
+
+    <!-- ANÚNCIO ADSTERRA 728x90 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '25bfc951e6a51f680b97b4930cd76489',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/25bfc951e6a51f680b97b4930cd76489/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- ANÚNCIO ADSTERRA 468x60 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '074c1590c41d8a8d4c2ebc3520bd9879',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/074c1590c41d8a8d4c2ebc3520bd9879/invoke.js"></script>
+      </div>
+    </div>
+
+    <div class="continue-area">
+      <button
+        id="continue-button"
+        class="continue-button"
+        type="button">
+        CONTINUAR PARA AS PLATAFORMAS
+      </button>
+
+      <p id="status-message">
+        Veja onde pesquisar o anime abaixo.
+      </p>
+    </div>
+
+    <!-- ANÚNCIO ADSTERRA 300x250 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '42c08169d27c624c52123e6a3753489d',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/42c08169d27c624c52123e6a3753489d/invoke.js"></script>
+      </div>
+    </div>
+
+    <section id="platforms">
+      <div class="section-label">ESCOLHA SUA PLATAFORMA</div>
+      <h2 class="section-title">Onde assistir Slime Datta Ken?</h2>
+
+      <p class="section-description">
+        Acesse uma das plataformas para pesquisar o título.
+        A disponibilidade varia conforme a região e o plano.
+      </p>
+
+      <div class="platform-grid">
+        <article class="platform-card">
+          <div class="logo logo-crunchyroll">◉</div>
+
+          <div>
+            <div class="platform-name">Crunchyroll</div>
+            <div class="platform-description">
+              Pesquise o anime e consulte as temporadas
+              e os episódios disponíveis.
+            </div>
+          </div>
+
+          <a class="platform-link crunchyroll"
+             href="https://www.crunchyroll.com/search?q=That%20Time%20I%20Got%20Reincarnated%20as%20a%20Slime"
+             target="_blank"
+             rel="noopener noreferrer">
+            BUSCAR NA CRUNCHYROLL
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-netflix">N</div>
+
+          <div>
+            <div class="platform-name">Netflix</div>
+            <div class="platform-description">
+              Consulte o catálogo para verificar se o anime
+              está disponível na sua região.
+            </div>
+          </div>
+
+          <a class="platform-link netflix"
+             href="https://www.netflix.com/search?q=That%20Time%20I%20Got%20Reincarnated%20as%20a%20Slime"
+             target="_blank"
+             rel="noopener noreferrer">
+            BUSCAR NA NETFLIX
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-prime">prime</div>
+
+          <div>
+            <div class="platform-name">Prime Video</div>
+            <div class="platform-description">
+              Pesquise o título e confira as opções disponíveis
+              no serviço.
+            </div>
+          </div>
+
+          <a class="platform-link prime"
+             href="https://www.primevideo.com/search/ref=atv_nb_sr?phrase=That%20Time%20I%20Got%20Reincarnated%20as%20a%20Slime"
+             target="_blank"
+             rel="noopener noreferrer">
+            BUSCAR NO PRIME VIDEO
+          </a>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Importante:</strong>
+        os links levam às buscas das plataformas e não garantem
+        que o título esteja disponível no Brasil. Esta página
+        não hospeda episódios. Confirme a disponibilidade
+        diretamente no serviço escolhido.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    SLIME DATTA KEN • Página independente de indicação de plataformas
+  </footer>
+
+  <script>
+    // Botão para rolar até as plataformas.
+    document
+      .getElementById("continue-button")
+      .addEventListener("click", function () {
+        document
+          .getElementById("platforms")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+      });
+
+    // Link publicitário: tenta abrir uma única vez por carregamento.
+    (function () {
+      const adUrl =
+        "https://www.profitableratecpmnetwork.com/ebqieyfshu?key=b0a73c29e7234a887eb5de734d42a269";
+
+      let activated = false;
+
+      document.addEventListener("click", function () {
+        if (activated) return;
+
+        activated = true;
+
+        window.open(
+          adUrl,
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }, true);
+    })();
+  </script>
+</body>
+</html>
