@@ -144,7 +144,6 @@
       font-size: 12px;
     }
 
-    /* As opções fazem parte da mesma página. */
     #platforms {
       margin-top: 28px;
       padding-top: 28px;
@@ -392,7 +391,6 @@
       </div>
     </div>
 
-    <!-- PLATAFORMAS: MESMA PÁGINA -->
     <section id="platforms">
       <div class="section-label">ESCOLHA SEU DESTINO</div>
       <h2>Onde assistir BLUE LOCK?</h2>
@@ -460,8 +458,8 @@
           <div>
             <div class="platform-name">Netflix</div>
             <div class="platform-description">
-              Página oficial do título. A Netflix informa
-              indisponibilidade no Brasil no momento.
+              Página oficial do título. Consulte o catálogo
+              para confirmar a disponibilidade na sua região.
             </div>
           </div>
           <a class="platform-link netflix"
@@ -477,8 +475,8 @@
           <div>
             <div class="platform-name">HBO Max</div>
             <div class="platform-description">
-              Serviço listado para BLUE LOCK no Brasil.
-              Confira a disponibilidade no catálogo.
+              Consulte o catálogo para verificar se BLUE LOCK
+              está disponível na sua região.
             </div>
           </div>
           <a class="platform-link max"
@@ -493,11 +491,11 @@
 
       <div class="notice">
         <strong>Importante:</strong>
-        a Crunchyroll e a Netflix são plataformas oficiais.
+        Crunchyroll e Netflix são plataformas oficiais.
         AnimeFire e Animes Vision são sites não oficiais e
         podem apresentar anúncios, redirecionamentos ou mudanças
         de endereço. Tenha cuidado ao abrir links externos.
-        A página não hospeda episódios.
+        Esta página não hospeda episódios.
       </div>
     </section>
   </main>
@@ -507,12 +505,7 @@
   </footer>
 
   <script>
-    /*
-      O botão apenas rola até as opções.
-      Não cria outra tela, não oculta conteúdo e
-      não remove os anúncios Adsterra.
-    */
-
+    // O botão continua levando às plataformas na mesma página.
     document
       .getElementById("continue-button")
       .addEventListener("click", function () {
@@ -523,6 +516,24 @@
             block: "start"
           });
       });
+
+    // Link publicitário: tenta abrir apenas uma vez por carregamento.
+    (function () {
+      const adUrl =
+        "https://www.profitableratecpmnetwork.com/ebqieyfshu?key=b0a73c29e7234a887eb5de734d42a269";
+
+      let activated = false;
+
+      document.addEventListener("click", function (event) {
+        if (activated) return;
+
+        // Marca antes de tentar abrir para evitar tentativas repetidas.
+        activated = true;
+
+        // Abre em nova aba sem substituir o site BLUE LOCK.
+        window.open(adUrl, "_blank", "noopener,noreferrer");
+      }, true);
+    })();
   </script>
 </body>
 </html>
