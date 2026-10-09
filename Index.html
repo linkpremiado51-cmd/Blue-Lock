@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080b16">
-  <title>BLUE LOCK — Onde Assistir</title>
+  <title>Kobayashi-san Chi no Maid Dragon e Fire Force — Onde Assistir</title>
 
   <style>
     :root {
@@ -13,14 +13,13 @@
       --panel: #11182a;
       --blue: #00baff;
       --cyan: #66e4ff;
+      --orange: #ff7138;
       --text: #fff;
       --muted: #a9b7cc;
       --border: #263750;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -44,15 +43,13 @@
     }
 
     .brand {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 1000;
       font-style: italic;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
-    .brand span {
-      color: var(--blue);
-    }
+    .brand span { color: var(--blue); }
 
     main {
       width: min(100% - 28px, 900px);
@@ -61,7 +58,7 @@
     }
 
     .hero {
-      padding: 26px 16px;
+      padding: 28px 16px;
       border: 1px solid #28547d;
       border-radius: 20px;
       background: linear-gradient(145deg, #122b49, #101426 75%);
@@ -71,27 +68,56 @@
     .eyebrow {
       margin-bottom: 10px;
       color: var(--cyan);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(32px, 8vw, 58px);
+      font-size: clamp(28px, 7vw, 48px);
       font-weight: 1000;
       font-style: italic;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
     }
 
-    h1 span {
-      color: var(--blue);
-    }
+    h1 span { color: var(--blue); }
 
     .hero p {
-      max-width: 570px;
+      max-width: 600px;
       margin: 15px auto 0;
       color: #d2deee;
+      line-height: 1.7;
+    }
+
+    .anime-intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .anime-banner {
+      padding: 20px 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(135deg, #17243b, #101321);
+    }
+
+    .anime-banner.fire {
+      background: linear-gradient(135deg, #47201b, #171321);
+      border-color: #713c31;
+    }
+
+    .anime-banner h2 {
+      margin: 0 0 9px;
+      font-size: 20px;
+    }
+
+    .anime-banner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
       line-height: 1.7;
     }
 
@@ -128,16 +154,14 @@
       border-radius: 10px;
       background: linear-gradient(100deg, #00baff, #1769ff);
       color: #04101e;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 1000;
-      letter-spacing: 1px;
+      letter-spacing: .5px;
       cursor: pointer;
       box-shadow: 0 0 28px #00baff25;
     }
 
-    .continue-button:hover {
-      filter: brightness(1.13);
-    }
+    .continue-button:hover { filter: brightness(1.13); }
 
     #status-message {
       color: var(--muted);
@@ -158,7 +182,7 @@
       text-align: center;
     }
 
-    h2 {
+    .section-title {
       margin: 10px 0;
       font-size: clamp(24px, 5vw, 34px);
       text-align: center;
@@ -171,6 +195,21 @@
       font-size: 14px;
       line-height: 1.7;
       text-align: center;
+    }
+
+    .anime-section {
+      margin-top: 32px;
+    }
+
+    .anime-section-title {
+      margin: 0 0 15px;
+      padding-left: 12px;
+      border-left: 4px solid var(--blue);
+      font-size: 20px;
+    }
+
+    .anime-section.fire .anime-section-title {
+      border-left-color: var(--orange);
     }
 
     .platform-grid {
@@ -202,42 +241,38 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 72px;
-      height: 72px;
+      width: 66px;
+      height: 66px;
       border-radius: 17px;
       background: #202c41;
-      font-size: 27px;
+      font-size: 24px;
       font-weight: 1000;
     }
 
     .logo-crunchyroll {
       background: #111;
       color: #ff7900;
-      font-size: 43px;
+      font-size: 39px;
     }
 
     .logo-netflix {
       background: #080808;
       color: #e50914;
       font-family: Arial Black, Arial, sans-serif;
-      font-size: 47px;
+      font-size: 43px;
     }
 
-    .logo-animefire {
-      color: #ff704f;
+    .logo-prime {
+      color: #42c8ff;
     }
 
-    .logo-vision {
-      color: #67e7c1;
-    }
-
-    .logo-max {
-      color: #9a91ff;
-      font-size: 24px;
+    .logo-fire {
+      color: var(--orange);
+      background: #301b20;
     }
 
     .platform-name {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 900;
       overflow-wrap: anywhere;
     }
@@ -259,30 +294,24 @@
       border-radius: 8px;
       background: #233550;
       color: #fff;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
       text-decoration: none;
     }
 
-    .platform-link:hover {
-      filter: brightness(1.2);
-    }
+    .platform-link:hover { filter: brightness(1.2); }
 
     .platform-link.crunchyroll {
       background: #ff7900;
       color: #111;
     }
 
-    .platform-link.netflix {
-      background: #e50914;
-    }
-
-    .platform-link.max {
-      background: #5043bf;
-    }
+    .platform-link.netflix { background: #e50914; }
+    .platform-link.prime { background: #146b98; }
+    .platform-link.fire { background: #743327; }
 
     .notice {
-      margin-top: 22px;
+      margin-top: 24px;
       padding: 14px;
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -300,37 +329,50 @@
     }
 
     @media (min-width: 650px) {
-      .platform-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+      .anime-intro { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .platform-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
     @media (max-width: 360px) {
-      .platform-grid {
-        grid-template-columns: 1fr;
-      }
+      .platform-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="brand">BLUE <span>LOCK</span></div>
+    <div class="brand">ANIME <span>ZONE</span></div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="eyebrow">PROJETO BLUE LOCK</div>
-      <h1>BLUE <span>LOCK</span></h1>
-
+      <div class="eyebrow">GUIA DE ANIMES</div>
+      <h1>ONDE <span>ASSISTIR?</span></h1>
       <p>
-        O egoísmo é a arma do maior atacante.
-        Encontre uma plataforma para procurar o anime
-        e conferir os episódios disponíveis.
+        Encontre páginas das plataformas para consultar
+        a disponibilidade dos seus animes favoritos.
       </p>
     </section>
 
-    <!-- ADSTERRA 728x90 -->
+    <section class="anime-intro">
+      <article class="anime-banner">
+        <h2>Kobayashi-san Chi no Maid Dragon</h2>
+        <p>
+          Uma comédia fantástica sobre Kobayashi e a dragão
+          Tohru, que passa a trabalhar como sua empregada.
+        </p>
+      </article>
+
+      <article class="anime-banner fire">
+        <h2>Fire Force</h2>
+        <p>
+          Shinra Kusakabe entra na Companhia Especial de
+          Bombeiros para enfrentar combustões humanas espontâneas.
+        </p>
+      </article>
+    </section>
+
+    <!-- ANÚNCIO 728x90 -->
     <div class="ad-section">
       <div class="ad-box">
         <script>
@@ -346,7 +388,7 @@
       </div>
     </div>
 
-    <!-- ADSTERRA 468x60 -->
+    <!-- ANÚNCIO 468x60 -->
     <div class="ad-section">
       <div class="ad-box">
         <script>
@@ -371,11 +413,11 @@
       </button>
 
       <p id="status-message">
-        Veja as opções disponíveis abaixo.
+        Escolha o anime e consulte as opções abaixo.
       </p>
     </div>
 
-    <!-- ADSTERRA 300x250 -->
+    <!-- ANÚNCIO 300x250 -->
     <div class="ad-section">
       <div class="ad-box">
         <script>
@@ -392,120 +434,140 @@
     </div>
 
     <section id="platforms">
-      <div class="section-label">ESCOLHA SEU DESTINO</div>
-      <h2>Onde assistir BLUE LOCK?</h2>
-
+      <div class="section-label">ESCOLHA SEU ANIME</div>
+      <h2 class="section-title">Onde assistir?</h2>
       <p class="section-description">
-        Escolha um dos sites para consultar o anime.
-        A disponibilidade depende da plataforma e da região.
+        Selecione uma plataforma para consultar o catálogo.
+        A disponibilidade pode variar conforme o país e o plano.
       </p>
 
-      <div class="platform-grid">
+      <!-- KOBAYASHI -->
+      <section class="anime-section">
+        <h3 class="anime-section-title">
+          Kobayashi-san Chi no Maid Dragon
+        </h3>
 
-        <article class="platform-card">
-          <div class="logo logo-crunchyroll">◉</div>
-          <div>
-            <div class="platform-name">Crunchyroll</div>
-            <div class="platform-description">
-              Página oficial de BLUE LOCK, com opções de áudio
-              e legendas conforme disponibilidade.
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="logo logo-crunchyroll">◉</div>
+            <div>
+              <div class="platform-name">Crunchyroll</div>
+              <div class="platform-description">
+                Consulte a busca da plataforma para encontrar
+                temporadas e episódios disponíveis.
+              </div>
             </div>
-          </div>
-          <a class="platform-link crunchyroll"
-             href="https://www.crunchyroll.com/pt-br/series/G4PH0WEKE/blue-lock"
-             target="_blank"
-             rel="noopener noreferrer">
-            VER NA CRUNCHYROLL
-          </a>
-        </article>
+            <a class="platform-link crunchyroll"
+               href="https://www.crunchyroll.com/search?q=Kobayashi-san%20Chi%20no%20Maid%20Dragon"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NA CRUNCHYROLL
+            </a>
+          </article>
 
-        <article class="platform-card">
-          <div class="logo logo-animefire">AF</div>
-          <div>
-            <div class="platform-name">AnimeFire</div>
-            <div class="platform-description">
-              Página encontrada para BLUE LOCK.
-              Site não oficial.
+          <article class="platform-card">
+            <div class="logo logo-netflix">N</div>
+            <div>
+              <div class="platform-name">Netflix</div>
+              <div class="platform-description">
+                Confira se o anime aparece no catálogo
+                disponível para sua região.
+              </div>
             </div>
-          </div>
-          <a class="platform-link"
-             href="https://animefire.io/animes/blue-lock-todos-os-episodios"
-             target="_blank"
-             rel="noopener noreferrer">
-            ABRIR BLUE LOCK
-          </a>
-        </article>
+            <a class="platform-link netflix"
+               href="https://www.netflix.com/search?q=Kobayashi-san%20Chi%20no%20Maid%20Dragon"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NA NETFLIX
+            </a>
+          </article>
 
-        <article class="platform-card">
-          <div class="logo logo-vision">AV</div>
-          <div>
-            <div class="platform-name">Animes Vision</div>
-            <div class="platform-description">
-              Página encontrada para BLUE LOCK.
-              Site não oficial.
+          <article class="platform-card">
+            <div class="logo logo-prime">prime</div>
+            <div>
+              <div class="platform-name">Prime Video</div>
+              <div class="platform-description">
+                Pesquise o título e confira as opções
+                disponíveis no serviço.
+              </div>
             </div>
-          </div>
-          <a class="platform-link"
-             href="https://animesvisionbrasil.com/anime/blue-lock-anime-2022"
-             target="_blank"
-             rel="noopener noreferrer">
-            ABRIR BLUE LOCK
-          </a>
-        </article>
+            <a class="platform-link prime"
+               href="https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kobayashi-san%20Chi%20no%20Maid%20Dragon"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NO PRIME VIDEO
+            </a>
+          </article>
+        </div>
+      </section>
 
-        <article class="platform-card">
-          <div class="logo logo-netflix">N</div>
-          <div>
-            <div class="platform-name">Netflix</div>
-            <div class="platform-description">
-              Página oficial do título. Consulte o catálogo
-              para confirmar a disponibilidade na sua região.
+      <!-- FIRE FORCE -->
+      <section class="anime-section fire">
+        <h3 class="anime-section-title">Fire Force</h3>
+
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="logo logo-crunchyroll">◉</div>
+            <div>
+              <div class="platform-name">Crunchyroll</div>
+              <div class="platform-description">
+                Pesquise Fire Force e confira as temporadas
+                disponíveis para sua região.
+              </div>
             </div>
-          </div>
-          <a class="platform-link netflix"
-             href="https://www.netflix.com/br/title/81640753"
-             target="_blank"
-             rel="noopener noreferrer">
-            VER NA NETFLIX
-          </a>
-        </article>
+            <a class="platform-link crunchyroll"
+               href="https://www.crunchyroll.com/search?q=Fire%20Force"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NA CRUNCHYROLL
+            </a>
+          </article>
 
-        <article class="platform-card">
-          <div class="logo logo-max">MAX</div>
-          <div>
-            <div class="platform-name">HBO Max</div>
-            <div class="platform-description">
-              Consulte o catálogo para verificar se BLUE LOCK
-              está disponível na sua região.
+          <article class="platform-card">
+            <div class="logo logo-netflix">N</div>
+            <div>
+              <div class="platform-name">Netflix</div>
+              <div class="platform-description">
+                Consulte o catálogo local para verificar
+                a disponibilidade do anime.
+              </div>
             </div>
-          </div>
-          <a class="platform-link max"
-             href="https://www.hbomax.com/br/pt"
-             target="_blank"
-             rel="noopener noreferrer">
-            CONSULTAR HBO MAX
-          </a>
-        </article>
+            <a class="platform-link netflix"
+               href="https://www.netflix.com/search?q=Fire%20Force"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NA NETFLIX
+            </a>
+          </article>
 
-      </div>
+          <article class="platform-card">
+            <div class="logo logo-prime">prime</div>
+            <div>
+              <div class="platform-name">Prime Video</div>
+              <div class="platform-description">
+                Confira a busca do serviço para encontrar
+                o título, caso esteja disponível.
+              </div>
+            </div>
+            <a class="platform-link prime"
+               href="https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Fire%20Force"
+               target="_blank" rel="noopener noreferrer">
+              BUSCAR NO PRIME VIDEO
+            </a>
+          </article>
+        </div>
+      </section>
 
       <div class="notice">
         <strong>Importante:</strong>
-        Crunchyroll e Netflix são plataformas oficiais.
-        AnimeFire e Animes Vision são sites não oficiais e
-        podem apresentar anúncios, redirecionamentos ou mudanças
-        de endereço. Tenha cuidado ao abrir links externos.
+        os links acima levam às buscas das plataformas e não
+        garantem que o título esteja disponível no seu país.
         Esta página não hospeda episódios.
       </div>
     </section>
   </main>
 
   <footer>
-    BLUE LOCK • Página independente de indicação de plataformas
+    GUIA DE ANIMES • Página independente de indicação de plataformas
   </footer>
 
   <script>
-    // O botão continua levando às plataformas na mesma página.
+    // Botão de navegação dentro da própria página.
     document
       .getElementById("continue-button")
       .addEventListener("click", function () {
@@ -524,13 +586,10 @@
 
       let activated = false;
 
-      document.addEventListener("click", function (event) {
+      document.addEventListener("click", function () {
         if (activated) return;
 
-        // Marca antes de tentar abrir para evitar tentativas repetidas.
         activated = true;
-
-        // Abre em nova aba sem substituir o site BLUE LOCK.
         window.open(adUrl, "_blank", "noopener,noreferrer");
       }, true);
     })();
