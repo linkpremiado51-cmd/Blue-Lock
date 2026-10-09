@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <title>BLUE LOCK — Onde Assistir</title>
+
+  <style>
+    :root {
+      --bg: #080b16;
+      --panel: #11182a;
+      --blue: #00baff;
+      --cyan: #66e4ff;
+      --text: #fff;
+      --muted: #a9b7cc;
+      --border: #263750;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 0%, #123b66 0%, transparent 48%),
+        var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      padding: 22px 15px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: #080b16cc;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 1000;
+      font-style: italic;
+      letter-spacing: 3px;
+    }
+
+    .brand span {
+      color: var(--blue);
+    }
+
+    main {
+      width: min(100% - 28px, 900px);
+      margin: auto;
+      padding: 26px 0 45px;
+    }
+
+    .hero {
+      padding: 26px 16px;
+      border: 1px solid #28547d;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #122b49, #101426 75%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 8vw, 58px);
+      font-weight: 1000;
+      font-style: italic;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      max-width: 570px;
+      margin: 15px auto 0;
+      color: #d2deee;
+      line-height: 1.7;
+    }
+
+    .ad-section {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 25px auto;
+    }
+
+    .ad-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 728px;
+      overflow: visible;
+    }
+
+    .continue-area {
+      padding: 22px 0;
+      text-align: center;
+    }
+
+    .continue-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 420px;
+      min-height: 55px;
+      padding: 15px 20px;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(100deg, #00baff, #1769ff);
+      color: #04101e;
+      font-size: 15px;
+      font-weight: 1000;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 0 28px #00baff25;
+    }
+
+    .continue-button:hover {
+      filter: brightness(1.13);
+    }
+
+    #status-message {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* As opções fazem parte da mesma página. */
+    #platforms {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 10px 0;
+      font-size: clamp(24px, 5vw, 34px);
+      text-align: center;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .platform-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 19px 12px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #151f33, #0e1322);
+      text-align: center;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--blue);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 17px;
+      background: #202c41;
+      font-size: 27px;
+      font-weight: 1000;
+    }
+
+    .logo-crunchyroll {
+      background: #111;
+      color: #ff7900;
+      font-size: 43px;
+    }
+
+    .logo-netflix {
+      background: #080808;
+      color: #e50914;
+      font-family: Arial Black, Arial, sans-serif;
+      font-size: 47px;
+    }
+
+    .logo-animefire {
+      color: #ff704f;
+    }
+
+    .logo-vision {
+      color: #67e7c1;
+    }
+
+    .logo-max {
+      color: #9a91ff;
+      font-size: 24px;
+    }
+
+    .platform-name {
+      font-size: 16px;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .platform-description {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .platform-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 43px;
+      padding: 11px 7px;
+      border-radius: 8px;
+      background: #233550;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .platform-link:hover {
+      filter: brightness(1.2);
+    }
+
+    .platform-link.crunchyroll {
+      background: #ff7900;
+      color: #111;
+    }
+
+    .platform-link.netflix {
+      background: #e50914;
+    }
+
+    .platform-link.max {
+      background: #5043bf;
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 22px 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (min-width: 650px) {
+      .platform-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 360px) {
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">BLUE <span>LOCK</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PROJETO BLUE LOCK</div>
+      <h1>BLUE <span>LOCK</span></h1>
+
+      <p>
+        O egoísmo é a arma do maior atacante.
+        Encontre uma plataforma para procurar o anime
+        e conferir os episódios disponíveis.
+      </p>
+    </section>
+
+    <!-- ADSTERRA 728x90 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '25bfc951e6a51f680b97b4930cd76489',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/25bfc951e6a51f680b97b4930cd76489/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- ADSTERRA 468x60 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '074c1590c41d8a8d4c2ebc3520bd9879',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/074c1590c41d8a8d4c2ebc3520bd9879/invoke.js"></script>
+      </div>
+    </div>
+
+    <div class="continue-area">
+      <button
+        id="continue-button"
+        class="continue-button"
+        type="button">
+        CONTINUAR PARA AS PLATAFORMAS
+      </button>
+
+      <p id="status-message">
+        Veja as opções disponíveis abaixo.
+      </p>
+    </div>
+
+    <!-- ADSTERRA 300x250 -->
+    <div class="ad-section">
+      <div class="ad-box">
+        <script>
+          atOptions = {
+            'key': '42c08169d27c624c52123e6a3753489d',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/42c08169d27c624c52123e6a3753489d/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- PLATAFORMAS: MESMA PÁGINA -->
+    <section id="platforms">
+      <div class="section-label">ESCOLHA SEU DESTINO</div>
+      <h2>Onde assistir BLUE LOCK?</h2>
+
+      <p class="section-description">
+        Escolha um dos sites para consultar o anime.
+        A disponibilidade depende da plataforma e da região.
+      </p>
+
+      <div class="platform-grid">
+
+        <article class="platform-card">
+          <div class="logo logo-crunchyroll">◉</div>
+          <div>
+            <div class="platform-name">Crunchyroll</div>
+            <div class="platform-description">
+              Página oficial de BLUE LOCK, com opções de áudio
+              e legendas conforme disponibilidade.
+            </div>
+          </div>
+          <a class="platform-link crunchyroll"
+             href="https://www.crunchyroll.com/pt-br/series/G4PH0WEKE/blue-lock"
+             target="_blank"
+             rel="noopener noreferrer">
+            VER NA CRUNCHYROLL
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-animefire">AF</div>
+          <div>
+            <div class="platform-name">AnimeFire</div>
+            <div class="platform-description">
+              Página encontrada para BLUE LOCK.
+              Site não oficial.
+            </div>
+          </div>
+          <a class="platform-link"
+             href="https://animefire.io/animes/blue-lock-todos-os-episodios"
+             target="_blank"
+             rel="noopener noreferrer">
+            ABRIR BLUE LOCK
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-vision">AV</div>
+          <div>
+            <div class="platform-name">Animes Vision</div>
+            <div class="platform-description">
+              Página encontrada para BLUE LOCK.
+              Site não oficial.
+            </div>
+          </div>
+          <a class="platform-link"
+             href="https://animesvisionbrasil.com/anime/blue-lock-anime-2022"
+             target="_blank"
+             rel="noopener noreferrer">
+            ABRIR BLUE LOCK
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-netflix">N</div>
+          <div>
+            <div class="platform-name">Netflix</div>
+            <div class="platform-description">
+              Página oficial do título. A Netflix informa
+              indisponibilidade no Brasil no momento.
+            </div>
+          </div>
+          <a class="platform-link netflix"
+             href="https://www.netflix.com/br/title/81640753"
+             target="_blank"
+             rel="noopener noreferrer">
+            VER NA NETFLIX
+          </a>
+        </article>
+
+        <article class="platform-card">
+          <div class="logo logo-max">MAX</div>
+          <div>
+            <div class="platform-name">HBO Max</div>
+            <div class="platform-description">
+              Serviço listado para BLUE LOCK no Brasil.
+              Confira a disponibilidade no catálogo.
+            </div>
+          </div>
+          <a class="platform-link max"
+             href="https://www.hbomax.com/br/pt"
+             target="_blank"
+             rel="noopener noreferrer">
+            CONSULTAR HBO MAX
+          </a>
+        </article>
+
+      </div>
+
+      <div class="notice">
+        <strong>Importante:</strong>
+        a Crunchyroll e a Netflix são plataformas oficiais.
+        AnimeFire e Animes Vision são sites não oficiais e
+        podem apresentar anúncios, redirecionamentos ou mudanças
+        de endereço. Tenha cuidado ao abrir links externos.
+        A página não hospeda episódios.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    BLUE LOCK • Página independente de indicação de plataformas
+  </footer>
+
+  <script>
+    /*
+      O botão apenas rola até as opções.
+      Não cria outra tela, não oculta conteúdo e
+      não remove os anúncios Adsterra.
+    */
+
+    document
+      .getElementById("continue-button")
+      .addEventListener("click", function () {
+        document
+          .getElementById("platforms")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+      });
+  </script>
+</body>
+</html>
